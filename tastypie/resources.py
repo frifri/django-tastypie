@@ -2253,7 +2253,6 @@ class ModelResource(Resource):
         self.authorized_delete_detail(self.get_object_list(bundle.request), bundle)
         bundle.obj.delete()
 
-    @transaction.atomic()
     def patch_list(self, request, **kwargs):
         """
         An ORM-specific implementation of ``patch_list``.
